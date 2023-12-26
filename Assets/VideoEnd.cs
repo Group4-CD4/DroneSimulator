@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -8,9 +9,13 @@ public class VideoEnd : MonoBehaviour
     public VideoPlayer videoPlayer;
     public GameObject gameObject;
     public GameObject finish;
+    public GameObject Timer;
+    public Logic logic;
     void Start()
     {
         videoPlayer = GetComponent<VideoPlayer>();
+        Timer.SetActive(false);
+        logic.timerOn = false;
     }
 
     void Update()
@@ -19,6 +24,7 @@ public class VideoEnd : MonoBehaviour
         {
             gameObject.SetActive(false);
             finish.SetActive(true);
+            logic.timerOn = true;
         }
     }
 }

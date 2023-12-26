@@ -1,148 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &184068
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 420066}
-  - component: {fileID: 2054112}
-  - component: {fileID: 12470400}
-  - component: {fileID: 8198640}
-  - component: {fileID: 1354674946674351595}
-  m_Layer: 0
-  m_Name: _Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &420066
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184068}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.1258116, y: -0, z: -0, w: 0.9920542}
-  m_LocalPosition: {x: 0, y: 2.2799997, z: -4.59}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1682395969720118036}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &2054112
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184068}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.01
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!124 &12470400
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184068}
-  m_Enabled: 1
---- !u!81 &8198640
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184068}
-  m_Enabled: 1
---- !u!114 &1354674946674351595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c485211bfcb650449b701935b0a94b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputEditorFPS: 0
-  FPS: 0
-  fpsViewMask:
-    serializedVersion: 2
-    m_Bits: 0
-  positionInsideDrone: {x: 0, y: 0, z: 0}
-  rotationInsideDrone: {x: 0, y: 0, z: 0}
-  fpsFieldOfView: 90
-  dronesToControl: []
-  pickedMyDrone: 1
-  ourDrone: {fileID: 6691637293369396069}
-  positionBehindDrone: {x: 0, y: 2, z: -4}
-  cameraFollowPositionTime: 0.1
-  extraTilt: 10
-  tpsLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  tpsFieldOfView: 60
-  freeMouseMovement: 1
-  useJoystickFreeMovementOnly: 1
-  mouse_X_axisName: Mouse X
-  mouse_Y_axisName: Mouse Y
-  dPad_X_axisName: dPad_X
-  dPad_Y_axisName: dPad_Y
-  mouseSensitvity: 100
-  mouseFollowTime: 0.2
-  canvasSelectButtons: []
-  canvasExitButtons: []
-  canvasTimeTrack: {fileID: 0}
 --- !u!1 &946907912034284811
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,6 +712,149 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6615081708706398235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388592865952188385}
+  - component: {fileID: 2974550941038134969}
+  - component: {fileID: 1143186384363310112}
+  - component: {fileID: 2632465417347312511}
+  - component: {fileID: 6920599708580462633}
+  m_Layer: 0
+  m_Name: _Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &388592865952188385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615081708706398235}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.1258116, y: -0, z: 2.3283062e-10, w: 0.99205416}
+  m_LocalPosition: {x: 0.000010386109, y: 2.2799988, z: -4.5900245}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1682395969720118036}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &2974550941038134969
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615081708706398235}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.01
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!124 &1143186384363310112
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615081708706398235}
+  m_Enabled: 1
+--- !u!81 &2632465417347312511
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615081708706398235}
+  m_Enabled: 1
+--- !u!114 &6920599708580462633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615081708706398235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c485211bfcb650449b701935b0a94b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputEditorFPS: 0
+  FPS: 0
+  fpsViewMask:
+    serializedVersion: 2
+    m_Bits: 0
+  positionInsideDrone: {x: 0, y: 0, z: 0}
+  rotationInsideDrone: {x: 0, y: 0, z: 0}
+  fpsFieldOfView: 90
+  dronesToControl: []
+  pickedMyDrone: 1
+  ourDrone: {fileID: 0}
+  positionBehindDrone: {x: 0, y: 2, z: -4}
+  cameraFollowPositionTime: 0.1
+  extraTilt: 10
+  tpsLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  tpsFieldOfView: 60
+  freeMouseMovement: 1
+  useJoystickFreeMovementOnly: 1
+  mouse_X_axisName: Mouse X
+  mouse_Y_axisName: Mouse Y
+  dPad_X_axisName: dPad_X
+  dPad_Y_axisName: dPad_Y
+  mouseSensitvity: 100
+  mouseFollowTime: 0.2
+  canvasSelectButtons: []
+  canvasExitButtons: []
+  canvasTimeTrack: {fileID: 0}
 --- !u!1 &6691637293369396069
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ Transform:
   m_Children:
   - {fileID: 1695298954794036062}
   - {fileID: 575378283257693476}
-  - {fileID: 420066}
+  - {fileID: 388592865952188385}
   - {fileID: 6182849436744938012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -16,7 +16,7 @@ public class DroneCollision : MonoBehaviour
     private void Awake()
   {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<Logic>();
-        if ( this.sparks != null)
+        if (this.sparks != null)
       return;
     MonoBehaviour.print((object) "Missing sparks particle prefab!");
   }

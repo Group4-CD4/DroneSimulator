@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class GameStage : MonoBehaviour
 {
-    public void TrainingScreen()
+    public GameObject lockImage;
+    public int index;
+    private void Start()
     {
-        SceneManager.LoadScene(2);
+        if(index  == PlayerPrefs.GetInt("unlockedLevel"))
+        {
+            lockImage.SetActive(false);
+        }
     }
-    public void Screen1()
+
+    public void CompleteLevel(int levelToUnlock)
     {
-        SceneManager.LoadScene(3);
+        if (levelToUnlock > PlayerPrefs.GetInt("unlockedLevel"))
+        {
+            PlayerPrefs.SetInt("unlockedLevel", levelToUnlock);
+        }
     }
-    public void Screen2()
+    public void LoadLevel(int index)
     {
-        SceneManager.LoadScene(4);
-    }
-    public void Screen3()
-    {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(index);
+
     }
 }
