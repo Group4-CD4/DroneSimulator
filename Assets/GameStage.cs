@@ -10,22 +10,26 @@ public class GameStage : MonoBehaviour
     public int index;
     private void Start()
     {
-        if(index  == PlayerPrefs.GetInt("unlockedLevel"))
+        if (index == PlayerPrefs.GetInt($"unlocked{index}Level"))
         {
             lockImage.SetActive(false);
         }
+        PlayerPrefs.SetInt($"unlocked{2}Level", 2);
+
     }
 
     public void CompleteLevel(int levelToUnlock)
     {
-        if (levelToUnlock > PlayerPrefs.GetInt("unlockedLevel"))
+        if (levelToUnlock > PlayerPrefs.GetInt($"unlocked{levelToUnlock}Level"))
         {
-            PlayerPrefs.SetInt("unlockedLevel", levelToUnlock);
+            PlayerPrefs.SetInt($"unlocked{levelToUnlock}Level", levelToUnlock);
         }
     }
     public void LoadLevel(int index)
     {
-        SceneManager.LoadScene(index);
-
+        if (index == PlayerPrefs.GetInt($"unlocked{index}Level"))
+        {
+            SceneManager.LoadScene(index);
+        }
     }
 }

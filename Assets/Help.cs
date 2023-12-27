@@ -15,7 +15,9 @@ public class Help : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
         if (other.gameObject.layer != null)
         {
-            gameStage.CompleteLevel(currentScene.buildIndex + 1);
+            if (gameObject.CompareTag("HelpVideo")) {
+                gameStage.CompleteLevel(currentScene.buildIndex + 1);
+            }
             gameObject.SetActive(true);
         }
     }

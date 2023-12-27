@@ -99,12 +99,15 @@ public class Logic : MonoBehaviour
 
         while (currentTime < fadeOutDuration)
         {
-            Debug.Log("Loop");
             float alpha = Mathf.Lerp(1, 0, currentTime / fadeOutDuration);
             missionText.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             currentTime += Time.deltaTime;
             yield return null;
         }
         missionText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0); // Đảm bảo văn bản biến mất hoàn toàn khi hoàn thành
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
