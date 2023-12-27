@@ -17,7 +17,7 @@ public class DroneCollision : MonoBehaviour
   {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<Logic>();
         if (this.sparks != null)
-      return;
+            return;
     MonoBehaviour.print((object) "Missing sparks particle prefab!");
   }
 
@@ -30,7 +30,7 @@ public class DroneCollision : MonoBehaviour
     Vector3 point = ((ContactPoint) contact).point;
     if ( this.sparks != null)
     {
-            logic.ReducedDurability();
+      logic.ReducedDurability();
       GameObject _spark = Object.Instantiate<GameObject>(this.sparks, point, quaternion);
       _spark.transform.localScale = transform.localScale * 2f;
       foreach (Transform transform in _spark.transform)
@@ -43,7 +43,7 @@ public class DroneCollision : MonoBehaviour
 
   private IEnumerator SparksCleaner(GameObject _spark)
   {
-    yield return (object) new WaitForSeconds(1f);
+    yield return (object) new WaitForSeconds(0.1f);
     Object.Destroy((Object) _spark);
   }
 }

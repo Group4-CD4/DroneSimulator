@@ -20,9 +20,9 @@ public class Logic : MonoBehaviour
     private string mission;
     private GameStage gameStage;
     private Scene currentScene;
+    public Text finishText;
     private void Start()
     {
-        gameStage = new GameStage();
         currentScene = SceneManager.GetActiveScene();
         if (currentScene.name != "TrainingScreen")
         {
@@ -75,10 +75,24 @@ public class Logic : MonoBehaviour
     }
     public void Check()
     {
-        if(progress == 5)
+
+        if (progress == 5)
         {
-            finish.SetActive(true);
-            gameStage.CompleteLevel(currentScene.buildIndex + 1);
+            Debug.Log(PlayerPrefs.GetInt($"unlocked{currentScene.buildIndex}Level"));
+            if (PlayerPrefs.GetInt($"unlocked{currentScene.buildIndex}Level") != currentScene.buildIndex){
+                finishText.text = "Bạn đã hoàn thành màn chơi và nhận được 1 sao";
+                finish.SetActive(true);
+                gameStage.CompleteLevel(currentScene.buildIndex + 1);
+                gameStage.CompleteLevel(currentScene.buildIndex);
+                PlayerPrefs.SetInt($"textStar", PlayerPrefs.GetInt("textStar") + 1);
+
+            }
+            else
+            {
+                finishText.text = "Bạn đã hoàn thành màn chơi";
+                finish.SetActive(true);
+            }
+           
         }
         if(durability == 0)
         {
@@ -99,7 +113,6 @@ public class Logic : MonoBehaviour
 
         while (currentTime < fadeOutDuration)
         {
-            Debug.Log("Loop");
             float alpha = Mathf.Lerp(1, 0, currentTime / fadeOutDuration);
             missionText.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             currentTime += Time.deltaTime;
@@ -107,4 +120,10 @@ public class Logic : MonoBehaviour
         }
         missionText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0); // Đảm bảo văn bản biến mất hoàn toàn khi hoàn thành
     }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
 }
