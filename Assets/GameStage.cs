@@ -14,6 +14,8 @@ public class GameStage : MonoBehaviour
         {
             lockImage.SetActive(false);
         }
+        PlayerPrefs.SetInt($"unlocked{2}Level", 2);
+
     }
 
     public void CompleteLevel(int levelToUnlock)
