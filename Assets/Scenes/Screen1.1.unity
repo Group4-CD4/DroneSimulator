@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13e05e39d6d3cb44a3e54cbd21dc2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 60
+  timeLeft: 120
   timerOn: 0
   timerTxt: {fileID: 510678956}
   missionText: {fileID: 1410378447}
@@ -385,6 +385,7 @@ MonoBehaviour:
   tryAgain: {fileID: 1473333433}
   finish: {fileID: 108066838}
   finishText: {fileID: 1565513353}
+  moveDrone: {fileID: 1750266677}
 --- !u!4 &66618509
 Transform:
   m_ObjectHideFlags: 0
@@ -3507,8 +3508,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.4137, y: -0.6380005}
-  m_SizeDelta: {x: 1818.1338, y: 977.7922}
+  m_AnchoredPosition: {x: -6.6135, y: -0.6380005}
+  m_SizeDelta: {x: 1838.188, y: 977.7922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531326827
 MonoBehaviour:
@@ -9275,6 +9276,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b0e2fdcb448af44a9121becbfc74be7, type: 3}
+--- !u!114 &1750266677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 319418597062517184, guid: 0b0e2fdcb448af44a9121becbfc74be7, type: 3}
+  m_PrefabInstance: {fileID: 1750266676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d159e690e142ae846908570b806e6be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1751570058
 PrefabInstance:
   m_ObjectHideFlags: 0

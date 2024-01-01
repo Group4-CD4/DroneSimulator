@@ -25,6 +25,7 @@ public class VideoEnd : MonoBehaviour
             gameObject.SetActive(false);
             finish.SetActive(true);
             logic.timerOn = true;
+            logic.DisableMoveDrone();
         }
     }
 }

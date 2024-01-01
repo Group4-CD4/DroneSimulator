@@ -9739,6 +9739,7 @@ GameObject:
   - component: {fileID: 223259403}
   - component: {fileID: 223259402}
   - component: {fileID: 223259401}
+  - component: {fileID: 223259404}
   m_Layer: 0
   m_Name: snow-particles
   m_TagString: Untagged
@@ -13388,11 +13389,11 @@ ParticleSystem:
   CollisionModule:
     enabled: 1
     serializedVersion: 4
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
-    multiplyColliderForceByParticleSize: 0
-    multiplyColliderForceByParticleSpeed: 0
+    multiplyColliderForceByParticleSize: 1
+    multiplyColliderForceByParticleSpeed: 1
     multiplyColliderForceByCollisionAngle: 1
     m_Planes: []
     m_Dampen:
@@ -13559,7 +13560,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 64
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -14538,6 +14539,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 815585767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &223259404
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223259400}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &224421324
 GameObject:
   m_ObjectHideFlags: 0
@@ -31361,7 +31389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13e05e39d6d3cb44a3e54cbd21dc2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 60
+  timeLeft: 300
   timerOn: 0
   timerTxt: {fileID: 1585149572}
   missionText: {fileID: 1700658026}
@@ -31370,6 +31398,7 @@ MonoBehaviour:
   tryAgain: {fileID: 405420580}
   finish: {fileID: 710839659}
   finishText: {fileID: 306218971}
+  moveDrone: {fileID: 1223282092}
 --- !u!4 &914531301
 Transform:
   m_ObjectHideFlags: 0
@@ -39091,6 +39120,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856471e3ea4f7504899922182f980c0b, type: 3}
+--- !u!114 &1223282092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 319418597062517184, guid: 856471e3ea4f7504899922182f980c0b, type: 3}
+  m_PrefabInstance: {fileID: 1223282091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d159e690e142ae846908570b806e6be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1229608562
 PrefabInstance:
   m_ObjectHideFlags: 0

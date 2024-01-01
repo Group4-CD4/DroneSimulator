@@ -32135,7 +32135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d13e05e39d6d3cb44a3e54cbd21dc2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 60
+  timeLeft: 300
   timerOn: 0
   timerTxt: {fileID: 1680282765}
   missionText: {fileID: 428461484}
@@ -32144,6 +32144,7 @@ MonoBehaviour:
   tryAgain: {fileID: 405420580}
   finish: {fileID: 710839659}
   finishText: {fileID: 306218971}
+  moveDrone: {fileID: 1223282092}
 --- !u!4 &914531301
 Transform:
   m_ObjectHideFlags: 0
@@ -39865,6 +39866,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 856471e3ea4f7504899922182f980c0b, type: 3}
+--- !u!114 &1223282092 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 319418597062517184, guid: 856471e3ea4f7504899922182f980c0b, type: 3}
+  m_PrefabInstance: {fileID: 1223282091}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d159e690e142ae846908570b806e6be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1229608562
 PrefabInstance:
   m_ObjectHideFlags: 0

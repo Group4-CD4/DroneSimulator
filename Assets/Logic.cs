@@ -21,8 +21,10 @@ public class Logic : MonoBehaviour
     private GameStage gameStage;
     private Scene currentScene;
     public Text finishText;
+    public DroneMovementScript moveDrone;
     private void Start()
     {
+        gameStage = new GameStage();
         currentScene = SceneManager.GetActiveScene();
         if (currentScene.name != "TrainingScreen")
         {
@@ -85,12 +87,13 @@ public class Logic : MonoBehaviour
                 gameStage.CompleteLevel(currentScene.buildIndex + 1);
                 gameStage.CompleteLevel(currentScene.buildIndex);
                 PlayerPrefs.SetInt($"textStar", PlayerPrefs.GetInt("textStar") + 1);
-
+                DisableMoveDrone();
             }
             else
             {
                 finishText.text = "Bạn đã hoàn thành màn chơi";
                 finish.SetActive(true);
+                DisableMoveDrone();
             }
            
         }
@@ -98,6 +101,7 @@ public class Logic : MonoBehaviour
         {
             timerOn = false;
             tryAgain.SetActive(true);
+            DisableMoveDrone();
         }
     }
     public void StartFadeTextIn(string text)
@@ -121,9 +125,10 @@ public class Logic : MonoBehaviour
         missionText.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0); // Đảm bảo văn bản biến mất hoàn toàn khi hoàn thành
     }
 
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.DeleteAll();
-    }
 
+    public void DisableMoveDrone()
+    {
+        moveDrone.sideMovementAmount = 0;
+        moveDrone.movementForwardSpeed = 0;
+    }
 }
