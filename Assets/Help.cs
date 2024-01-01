@@ -31,7 +31,6 @@ public class Help : MonoBehaviour
                     finishText.text = "Bạn đã hoàn thành màn chơi";
 
                 }
-               
             }
             gameObject.SetActive(true);
         }
